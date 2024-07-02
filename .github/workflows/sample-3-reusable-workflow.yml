@@ -3,6 +3,6 @@ run-name: ${{ github.actor }} is learning GitHub Actions with Reusable Workflows
 on: [push]
 jobs:
   check-bats-version-reusable:
-    uses: ./.github/reusable-workflows/reusable-bats.yml
+    uses: ./.github/workflows/reusable-bats.yml
     with:
       node-version: '22'
