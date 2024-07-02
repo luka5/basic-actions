@@ -40,4 +40,4 @@ jobs:
         title: Monthly issue metrics report
         token: ${{ secrets.GITHUB_TOKEN }}
         content-filepath: ./issue_metrics.md
-# copie from https://github.com/github/issue-metrics
+# copied from https://github.com/github/issue-metrics
