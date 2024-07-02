@@ -1,4 +1,4 @@
-name: learn-github-actions-with-composite-action
+name: Sample 2 with Composite Action
 run-name: ${{ github.actor }} is learning GitHub Actions with Composite Action
 on: [push]
 jobs:
