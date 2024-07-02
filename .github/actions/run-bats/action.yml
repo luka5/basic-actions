@@ -12,5 +12,7 @@ runs:
     with:
       node-version: '${{ inputs.node-version }}'
   - run: npm install -g bats
+    shell: bash
   - run: bats -v
+    shell: bash
 # inpired by https://docs.github.com/en/actions/using-workflows/about-workflows
