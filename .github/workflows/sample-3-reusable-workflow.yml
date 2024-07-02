@@ -1,4 +1,4 @@
-name: learn-github-actions-with-reusable-workflows
+name: Sample 3 Reusable Workflow
 run-name: ${{ github.actor }} is learning GitHub Actions with Reusable Workflows
 on: [push]
 jobs:
