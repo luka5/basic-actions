@@ -1,4 +1,4 @@
-name: learn-github-actions
+name: Sample 1 Basic Workflow
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
