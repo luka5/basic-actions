@@ -1,4 +1,4 @@
-name: abstract-learn-github-actions-reusable
+name: Abstract Reusable Workflow
 on:
   workflow_call:
     inputs:
