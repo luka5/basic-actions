@@ -1,4 +1,4 @@
-name: Sample Docker Action - Monthly issue metrics
+name: Sample 4 Docker Action - Monthly issue metrics
 on:
   workflow_dispatch:
   #schedule:
