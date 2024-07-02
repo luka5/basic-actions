@@ -5,6 +5,8 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - uses: ./.github/actions/run-bats
         with: 
           node-version: '22'
