@@ -1,0 +1,27 @@
+name: Dynamic Matrix Example
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  generate-matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Generate matrix values
+        id: set-matrix
+        run: |
+          echo "::set-output name=matrix::$(echo '["param1","param2","param3"]' | jq -c)"
+
+  use-matrix:
+    needs: generate-matrix
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        stepparam: ${{ fromJson(needs.generate-matrix.outputs.matrix) }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run step with dynamic parameters
+        run: echo "Running with parameter: ${{ matrix.stepparam }}"
