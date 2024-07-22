@@ -24,4 +24,4 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run step with dynamic parameters
-        run: echo "Running with parameter: ${{ matrix.stepparam }}"
+        run: echo "Running with parameter ${{ matrix.stepparam }}"
